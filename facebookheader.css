@@ -1,0 +1,164 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  background-color: rgb(38, 39, 41);
+  border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.fb-logo {
+  width: 75px;
+  filter: brightness(95%);
+  border-radius: 100%;
+}
+
+.fb-search {
+  width: 230px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: rgb(56, 56, 56);
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  color: white;
+}
+
+.search-plus-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fb-search::placeholder {
+  color: rgb(167, 167, 167);
+  padding-left: 14px;
+  font-size: 0.9rem;
+  font-family: "Roboto";
+}
+
+.facebook-logo {
+  position: absolute;
+  left: 80px;
+  margin-bottom: 2px;
+}
+
+.nav-item:hover {
+  background-color: rgb(83, 83, 83);
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.selected {
+  border: none;
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.selected:hover {
+  background-color: rgba(128, 128, 128, 0);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.border {
+  border-bottom: 3px solid rgb(0, 89, 255);
+}
+
+.bg-right-side-icons {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(61, 61, 61);
+  margin-right: 10px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+}
+
+.bg-right-side-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.facebook-logo2 {
+  visibility: hidden;
+}
+@media (max-width: 1160px) {
+  .fb-search {
+    display: none;
+  }
+  .fb-logo {
+    width: 60px;
+  }
+  .facebook-logo2 {
+    visibility: visible;
+    position: absolute;
+    right: 220px;
+    top: 27px;
+    margin-bottom: 2px;
+  }
+  .facebook-logo {
+    display: none;
+  }
+  .middle {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .nav-item {
+    width: 60px;
+  }
+}
+.pointer {
+  position: absolute;
+  z-index: 10000;
+  bottom: -10px;
+}
+.tool-tip {
+  position: absolute;
+  width: 200px;
+  right: 40px;
+  bottom: 30px;
+  background-color: rgba(151, 151, 151, 0.747);
+  border-radius: 10px;
+  transform: rotateZ(3deg);
+  height: 20px;
+  text-align: center;
+  display: none;
+  transition: 0.5s all ease-in-out;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: rgb(0, 190, 248);
+}
+.portfolio-link:hover .tool-tip {
+  display: block;
+}
